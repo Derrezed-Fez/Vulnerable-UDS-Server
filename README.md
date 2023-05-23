@@ -23,11 +23,10 @@ Compiling uds-server
 ====================
 
 Right now the tool was developed on Ubuntu Linux but is simple enough that it should compile on
-any standard Linux system.  Simply type 'make':
+any standard Linux system. Enter the following:
 
 ```
-$ make
-cc     uds-server.c   -o uds-server
+$ gcc -g -o uds-server uds-server.c libconfuse.a
 ```
 
 This version is still considered 'alpha' but the help screen should look something like:
