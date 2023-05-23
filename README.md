@@ -45,6 +45,15 @@ Usage: ./uds-server [options] <can_interface>
 Most of these switches are just for early testing and will eventually be moved
 to a config file for more flexibility in fuzzing, etc.
 
+Setting up a virtual CAN interface
+====================
+Run the following commands to initialize a virtual CAN interface. These steps require socketcan.
+```
+$ sudo modprobe vcan
+$ sudo ip link add dev vcan0 type vcan
+$ sudo ip link set up vcan0
+```
+
 Running uds-server for testing
 ==============================
 
